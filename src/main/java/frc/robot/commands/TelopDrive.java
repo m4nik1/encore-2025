@@ -37,9 +37,9 @@ public class TelopDrive extends Command {
     double getY = RobotContainer.getLeftY();
     double getRotation = RobotContainer.getRightX();
 
-    double translationVal = translateLimiter.calculate(speedMultiplier * MathUtil.applyDeadband(-getY, .05));
-    double strafeVal = strafeLimiter.calculate(speedMultiplier * MathUtil.applyDeadband(-getX, .06));
-    double rotationVal = rotationLimiter.calculate(speedMultiplier * MathUtil.applyDeadband(-getRotation, .07));
+    double translationVal = translateLimiter.calculate(speedMultiplier * MathUtil.applyDeadband(-getY, .02));
+    double strafeVal = strafeLimiter.calculate(speedMultiplier * MathUtil.applyDeadband(-getX, .02));
+    double rotationVal = rotationLimiter.calculate(speedMultiplier * MathUtil.applyDeadband(-getRotation, .02));
 
     Translation2d translation = new Translation2d(translationVal, strafeVal);
 

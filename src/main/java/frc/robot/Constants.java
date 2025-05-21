@@ -30,7 +30,7 @@ public final class Constants {
     public static final double wheelCircum = Units.inchesToMeters(4.0) * Math.PI;
     public static final double driveRatio = 6.75;
     public static final double angleRatio = 150.0 / 7.0;
-    public static final double speedMultiTeleop = 0.7;
+    public static final double speedMultiTeleop = 0.55;
     public static final double maxSpeed = 4; // meters per second
     public static final double maxAngularSpd = 5;
     public static final double freeSpd = ((6784 / 60) * (wheelDia * Math.PI)) / driveRatio;

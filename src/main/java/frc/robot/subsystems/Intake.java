@@ -5,6 +5,7 @@
 package frc.robot.subsystems;
 
 import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.SparkLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DriverStation;
@@ -21,8 +22,8 @@ public class Intake extends SubsystemBase {
   public Intake() 
   {
     // intakeMotor.restoreFactoryDefaults();
-    // intakeMotor = new SparkMax(8, );
-    // noteDetector = new DigitalInput(0);
+    intakeMotor = new SparkMax(8, MotorType.kBrushless);
+    noteDetector = new DigitalInput(0);
   }
 
   public void actuateIntake(double power) {
@@ -52,5 +53,6 @@ public class Intake extends SubsystemBase {
   @Override
   public void periodic() {
     timer.start();
+    // This method will be called once per scheduler run
   }
 }

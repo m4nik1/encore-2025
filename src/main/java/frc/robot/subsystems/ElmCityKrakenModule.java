@@ -20,6 +20,7 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.math.util.Units;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
@@ -242,13 +243,13 @@ public class ElmCityKrakenModule extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    // SmartDashboard.putNumber("Module Angle " + modNum, getAngle());
+    SmartDashboard.putNumber("Module Angle " + modNum, getAngle());
     // SmartDashboard.putNumber("Swerve Velocity " + modNum, getDriveVelocityConversion());
     // SmartDashboard.putNumber("Drive Distance " + modNum, getDrivePosConversion());
     // SmartDashboard.putNumber("Drive Velocity Wanted" + modNum, .5); 
     // SmartDashboard.putNumber("Swerve Motor Voltage " + modNum, driveMotor.getMotorVoltage().getValueAsDouble());
     // SmartDashboard.putNumber("Swerve Motor Supply " + modNum, driveMotor.getSupplyVoltage().getValueAsDouble());
-    // SmartDashboard.putNumber("Nac Angle " + modNum, getNac());
+    SmartDashboard.putNumber("Nac Angle " + modNum, getNac());
     // SmartDashboard.putNumber("Rotation 90", Rotation2d.fromDegrees(90).getRotations());
   }
 }
